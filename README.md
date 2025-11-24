@@ -1,7 +1,7 @@
 # Generic-Ruby-Deserialization-Ruby-2.x-3.x
 A simple Ruby deserialization payload generator tested across multiple Ruby versions using Docker. Generates both Base64 and raw Marshal payloads for research and security testing.
 
-This script (serialize_me.rb) generates Ruby deserialization payloads (Base64 and raw Marshal). Run it inside Docker to test payloads against different Ruby versions without installing Ruby locally — pass the command to embed as the script argument.
+This script (`serialize_me.rb`) generates Ruby deserialization payloads (Base64 and raw Marshal). Run it inside Docker to test payloads against different Ruby versions without installing Ruby locally— pass the command to embed as the script argument.
 
 You can run the script for a single Ruby version or loop through many versions to compare outputs.
 
