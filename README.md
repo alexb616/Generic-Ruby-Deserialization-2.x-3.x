@@ -5,7 +5,7 @@ This script (`serialize_me.rb`) generates Ruby deserialization payloads (Base64 
 
 You can run the script for a single Ruby version or loop through many versions to compare outputs.
 
-Run with a specific Ruby version
+Run with a specific Ruby version. Delete `2>/dev/null` for docker debug
 
 ```bash
 docker run --rm \
@@ -18,11 +18,11 @@ Replace 2.6 with the Ruby version you want and 'whoami' with the command to embe
 
 Run across multiple Ruby versions
 
-```
+```bash
 for i in $(seq -f 2.%g 0 7) 3.0; do
   echo "ruby:${i}"
   docker run --rm -v "$PWD":/work -w /work ruby:${i} \
-    ruby serialize_me.rb 'whoami' 2>/dev/null
+    ruby serialize_me.rb 'whoami'
   echo "-----------------------"
 done
 ```
